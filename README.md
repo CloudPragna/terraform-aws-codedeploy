@@ -28,8 +28,13 @@
 | create\_deployment\_group | (Optional) Do you want create codedeploy deployment group | `bool` | `true` | no |
 | deployment\_config\_name | (Optional) The name of the group's deployment config. The default is `CodeDeployDefault.OneAtATime`. | `string` | `"CodeDeployDefault.OneAtATime"` | no |
 | deployment\_group\_name | (Required) The name of the deployment group. | `string` | n/a | yes |
+| deployment\_style | (Optional) Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer | `any` | `{}` | no |
+| ec2\_tag\_filter | (Optional) Tag filters associated with the deployment group. | `any` | `[]` | no |
+| ecs\_service | (Optional) Configuration block(s) of the ECS services for a deployment group | `any` | `[]` | no |
+| load\_balancer\_info | (Optional) Single configuration block of the load balancer to use in a blue/green deployment | `any` | `{}` | no |
 | name | (Required) The name of the application. | `string` | n/a | yes |
 | service\_role\_arn | (Required) The service role ARN that allows deployments. | `string` | n/a | yes |
+| trigger\_configuration | (Optional) Configuration block(s) of the triggers for the deployment group | `any` | `[]` | no |
 
 ## Outputs
 

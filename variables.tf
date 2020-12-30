@@ -73,3 +73,43 @@ variable "blue_green_deployment_config" {
   }
 }
 
+
+variable "deployment_style" {
+  type        = any
+  description = "(Optional) Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer"
+  default = {
+
+  }
+}
+
+variable "ec2_tag_filter" {
+  type        = any
+  description = "(Optional) Tag filters associated with the deployment group."
+  default = [
+
+  ]
+}
+
+variable "ecs_service" {
+  type        = any
+  description = "(Optional) Configuration block(s) of the ECS services for a deployment group"
+  default = [
+
+  ]
+}
+
+variable "load_balancer_info" {
+  type        = any
+  description = "(Optional) Single configuration block of the load balancer to use in a blue/green deployment"
+  default = {
+
+  }
+}
+
+variable "trigger_configuration" {
+  type        = any
+  description = "(Optional) Configuration block(s) of the triggers for the deployment group"
+  default = [
+
+  ]
+}
