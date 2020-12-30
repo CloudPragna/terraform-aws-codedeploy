@@ -3,7 +3,7 @@ resource "aws_codedeploy_deployment_group" "this" {
 
   app_name               = var.create_app ? aws_codedeploy_app.this[0].name : var.app_name
   deployment_group_name  = var.deployment_group_name
-  deployment_config_name = var.deployment_config_name
+  deployment_config_name = var.create_deployment_config ? aws_codedeploy_deployment_config.this[0].id : var.deployment_config_name
   service_role_arn       = var.service_role_arn
   autoscaling_groups     = var.autoscaling_groups
 

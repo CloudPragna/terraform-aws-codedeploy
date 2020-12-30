@@ -113,3 +113,27 @@ variable "trigger_configuration" {
 
   ]
 }
+
+########### aws_codedeploy_deployment_config
+
+variable "create_deployment_config" {
+  tybe        = bool
+  description = "(Optional) Do you want to create deployment config"
+  default     = true
+}
+
+variable "minimum_healthy_hosts" {
+  type        = any
+  description = "(Optional) A minimum_healthy_hosts block. Required for Server compute platform."
+  default = [
+
+  ]
+}
+
+variable "traffic_routing_config" {
+  type        = any
+  description = "(Optional) A traffic_routing_config block."
+  default = [
+
+  ]
+}
