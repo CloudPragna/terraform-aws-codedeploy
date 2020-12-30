@@ -50,3 +50,6 @@
 | deployment\_group\_id | Application name and deployment group name. |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## License
+
+Apache 2 Licensed. See LICENSE for full details.
