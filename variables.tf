@@ -117,7 +117,7 @@ variable "trigger_configuration" {
 ########### aws_codedeploy_deployment_config
 
 variable "create_deployment_config" {
-  tybe        = bool
+  type        = bool
   description = "(Optional) Do you want to create deployment config"
   default     = true
 }
